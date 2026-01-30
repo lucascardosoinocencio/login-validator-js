@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auth Mini SPA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HOME -->
+    <div class="card screen" id="home">
+      <h1>Authentication</h1>
+
+      <p id="homeUser" style="text-align: center; margin: 10px 0 20px"></p>
+
+      <p style="text-align: center; margin-bottom: 20px">Choose an option</p>
+
+      <button id="loginHomeBtn" onclick="showLogin()">Login</button>
+      <button
+        id="registerHomeBtn"
+        onclick="showRegister()"
+        style="margin-top: 10px"
+      >
+        Register
+      </button>
+
+      <button id="logoutBtn" style="margin-top: 10px" class="hidden">
+        Logout
+      </button>
+      <button id="deleteBtn" class="hidden danger" style="margin-top: 10px">
+        Delete account
+      </button>
+      <button id="showDataBtn" class="hidden" style="margin-top: 10px">
+        Show my data
+      </button>
+      <div id="userDataBox" class="message hidden"></div>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="card hidden" id="login">
+      <h1>Login</h1>
+
+      <label>Email</label>
+      <input id="email" placeholder="you@example.com" />
+
+      <label>Password</label>
+      <input id="password" type="password" placeholder="Min 6 characters" />
+
+      <button id="loginBtn">Login</button>
+
+      <div id="loginResult" class="message"></div>
+
+      <button class="link-btn" onclick="showHome()">← Back</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="card hidden" id="register">
+      <h1>Register</h1>
+
+      <label>Name</label>
+      <input id="name" placeholder="Your name" />
+
+      <label>Age</label>
+      <input id="age" placeholder="Your age" />
+
+      <label>Email</label>
+      <input id="registerEmail" placeholder="you@example.com" />
+
+      <label>Password</label>
+      <input
+        id="registerPassword"
+        type="password"
+        placeholder="Min 6 characters"
+      />
+
+      <button id="registerBtn">Register</button>
+
+      <div id="registerResult" class="message"></div>
+
+      <button class="link-btn" onclick="showHome()">← Back</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
